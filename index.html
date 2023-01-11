@@ -1,0 +1,57 @@
+<html ⚡ lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#6bc250" />
+    <title>BDE | HOME</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="msapplication-TileColor" content="#6bc250">
+    <link rel="icon" type="image/png" sizes="16x16"  href="BDE.png">
+  </head>
+<body>
+
+    <header>
+        <a href="#" class="logo">BDE</a>
+        <ul>
+            <li> <a href="" class="active">Home</a></li>
+            <li> <a href="">Vips</a></li>
+            <li> <a href="">Suporte</a></li>
+        </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars">
+     <img src="moon.png" id="moon">
+     <img src="mountains_behind.png" id="mountains_behind">  
+     <h2 id="text">Bem Vindo(a), aqui você pode comprar vips<h2>
+     <a href="#sec" id="btn">Comprar</a>
+     <img src="mountains_front.png" id="mountains_front"> 
+    </section>
+    <div class="sec" id="sec">
+        <h2>fdgdfgfdgf</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sed, error dolorum sint quos deserunt mollitia necessitatibus quisquam, neque ducimus quis unde id ad beatae perferendis, harum quam. Laboriosam, alias.</p>
+    </div>
+
+    <script>
+     let stars = document.getElementById('stars');
+     let moon = document.getElementById('moon');
+     let mountains_behind = document.getElementById('mountains_behind');
+     let text = document.getElementById('text');
+     let btn = document.getElementById('btn');
+     let mountains_front = document.getElementById('mountains_front');
+     let header =document.querySelector('header');
+
+     window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+     })
+    </script>
+</body>
+</html>
