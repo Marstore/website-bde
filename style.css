@@ -161,6 +161,10 @@ footer img:hover {
     filter: invert(50%);
 }
 
+audio {
+    display: none;
+}
+
 @media (max-width: 785px) {
     
     #text {
