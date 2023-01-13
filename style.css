@@ -214,4 +214,22 @@ audio {
         height: 60px;
         width: 300px;
     }
+
+    #mountains_behind {
+        display: none;
+    }
+    #mountains_front {
+        display: none;
+    }
+    #text {
+        position: absolute;
+        color: #ff9500;
+        white-space: nowrap;
+        font-size: 5vw;
+        z-index: 9;
+        background: #fff;
+        border-radius: 20px;
+        padding: 9px 30px;
+      }
 }
+
