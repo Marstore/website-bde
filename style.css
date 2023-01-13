@@ -13,8 +13,9 @@
     --text:var(#fff);
 }
 
-body {
+html, body {
     min-height: 100vh;
+    max-width: 100%;
     overflow-x: hidden;
     background: linear-gradient(#ff9500,#ff7700);
 }
