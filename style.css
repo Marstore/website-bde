@@ -179,8 +179,7 @@ audio {
 }
 
 
-
-@media (max-width: 785px) {
+@media (max-width: 909px) {
     
     #text {
         position: absolute;
@@ -230,6 +229,5 @@ audio {
         background: #fff;
         border-radius: 20px;
         padding: 9px 30px;
-      }
+     }
 }
-
