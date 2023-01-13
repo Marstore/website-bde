@@ -179,7 +179,7 @@ audio {
 }
 
 
-@media (max-width: 909px) {
+@media (max-width: 785px) {
     
     #text {
         position: absolute;
@@ -214,12 +214,15 @@ audio {
         width: 300px;
     }
 
-    #mountains_behind {
+    section img {
         display: none;
     }
-    #mountains_front {
-        display: none;
+
+
+    #moon {
+        display: flex;
     }
+
     #text {
         position: absolute;
         color: #ff9500;
