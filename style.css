@@ -7,17 +7,40 @@
     font-family: 'Bebas Neue', cursive;
     text-decoration: none;
     scroll-behavior: smooth;
+    list-style: none;
 }
 
 :root {
-    --text:var(#fff);
+    --fundo: linear-gradient(
+      -45deg,
+      #ffaa00 29.69%,
+      #ff7b00 65.3%,
+      #ff4800 97.4%
+  );
+  --white: #fff;
 }
 
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } 
+
+
 html, body {
+    color: var(--white);
+    background-size: 400% 400%;
     min-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
-    background: linear-gradient(#ff9500,#ff7700);
+    background: var(--fundo);
+    animation: gradient 15s ease infinite;
 }
 
 header {
@@ -32,6 +55,7 @@ header {
     z-index: 10000;
 }
 
+
 header .logo {
     color: #fff;
     font-weight: 700;
@@ -39,6 +63,10 @@ header .logo {
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+header .logo:hover {
+    color: #050505;
 }
 
 header ul {
@@ -61,8 +89,8 @@ header ul li a {
 
 header ul li a:hover,
 header ul li a.active {
-    color: #ff9500;
-    background: #fff;
+    color: #ffffff;
+    background: rgb(0, 0, 0);
 }
 
 section {
@@ -82,7 +110,7 @@ section::before {
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top,#ff7700 ,transparent);
+    background: linear-gradient(to top, #ff7700,transparent);
     z-index: 1000;
 }
 
@@ -94,6 +122,8 @@ section img {
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+    -webkit-filter: drop-shadow(0px 0px 20px rgb(0, 0, 0)); 
+    filter: drop-shadow(0px 0px 20px rgb(4, 4, 4));;
 }
 
 section img#moon {
@@ -107,11 +137,10 @@ section img#mountains_front {
 #text {
     position: absolute;
     /* right: -350px; */
-    color: #ff9500;
+    color: #ff4a00;
     white-space: nowrap;
     font-size: 2.0vw;
     z-index: 9;
-    /* text-shadow: 0.1em 0.1em 0.01em rgb(0, 0, 0); */
     background: #fff;
     border-radius: 20px;
     padding: 8px 30px;
@@ -123,16 +152,22 @@ section img#mountains_front {
     padding: 8px 30px;
     border-radius: 40px;
     background: #fff;
-    color: #ff9500;
+    color: #ff4a00;
     font-size: 1.5em;
     z-index: 9;
     transform: translateY(100px);
 }
 
+#btn:hover {
+    color: #ffffff;
+    background: rgb(0, 0, 0);
+    font-size: 1.6em;
+}
+
 .sec {
     position: relative;
     padding: 100px;
-    /* background: #000; */
+    background: #ff7700;
 }
 
 .sec h2 {
@@ -148,7 +183,7 @@ section img#mountains_front {
 }
 
 .card p {
-    color: #ff9500;
+    color: #ff4a00;
 }
 
 #imgs-vips {
@@ -158,6 +193,8 @@ section img#mountains_front {
 #mountains_behind {
     filter: sepia(33%);
     filter: drop-shadow(10%);
+    -webkit-filter: drop-shadow(0px 0px 70px rgb(0, 0, 0)); 
+    filter: drop-shadow(0px 0px 70px rgb(4, 4, 4));;
 }
 
 
@@ -172,7 +209,13 @@ footer img {
     position: fixed;  
     right: 15px; 
     bottom: 15px;
-    
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(0, 0, 0)); 
+    filter: drop-shadow(0px 0px 10px rgb(4, 4, 4));;
+}
+
+#button-icon-discord img:hover {
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 255, 255)); 
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));;
 }
 
 audio {
